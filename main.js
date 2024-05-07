@@ -37,10 +37,27 @@ methods: {
             if (!value) return '';
             return value.toString().charAt(0).toUpperCase() + value.toString().slice(1);
         },
+
+        guardarPokemon() {
+            if (this.pokemonElegido) {
+                this.historialPokemones.push(this.pokemonElegido);
+                localStorage.setItem('historialPokemones', JSON.stringify(this.historialPokemones));
+                alert('El Pokémon ha sido guardado en el historial.');
+            } else {
+                alert('No hay Pokémon seleccionado para guardar.');
+            }
+        },
     },
 
 
-    mounted() { fetch("https://pokeapi.co/api/v2/pokemon/?limit=100&offset=0")
+    mounted() { 
+        
+        const historialGuardado = localStorage.getItem('historialPokemones');
+        if (historialGuardado) {
+            this.historialPokemones = JSON.parse(historialGuardado);
+        }
+        
+        fetch("https://pokeapi.co/api/v2/pokemon/?limit=100&offset=0")
         .then(response => response.json())
         .then(data => {
             this.pokemones = data.results;
