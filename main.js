@@ -47,6 +47,12 @@ methods: {
                 alert('No hay Pokémon seleccionado para guardar.');
             }
         },
+        
+        limpiarHistorial() {
+            localStorage.removeItem('historialPokemones');
+            this.historialPokemones = [];
+            alert('Borrar todos los pokémones guardados');
+          }
     },
 
 

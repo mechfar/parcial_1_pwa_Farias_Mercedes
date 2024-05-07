@@ -27,6 +27,19 @@
                     </div>
                 </div>
             </div>
+            <div v-if="historialPokemones.length === 0" class="text-center mt-3">
+                <div class="text-left">
+                    Aún no has guardado ningún Pokémon. ¡Guarda tus favoritos y regresa a verlos aquí!
+                </div>
+                <div class="m-3">
+                <a href="index.html" class="btn-ver-historial ">Volver</a>
+            </div>
+            </div>
+
+            <div v-if="historialPokemones.length > 0">
+                <button @click="limpiarHistorial" class="ver-personaje m-3">Limpiar historial</button>
+                <a href="index.html" class="btn-ver-historial">Volver</a>
+            </div>
         </div>
         
     </div>
