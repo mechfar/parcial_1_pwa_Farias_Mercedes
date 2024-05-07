@@ -1,0 +1,132 @@
+body {
+    font-family: 'Lato', sans-serif;
+}
+
+
+header {
+    text-align: center; 
+    padding: 2rem;
+}
+
+
+.logo-container {
+    width: 100px; 
+    margin: 0 auto; 
+   
+}
+
+
+header img {
+    max-width: 100%; 
+    height: auto; 
+}
+/* Estilos para las cards */
+.card {
+    border: 2px solid #005aa5; 
+    border-radius: 10px; 
+    box-shadow: 0px 4px 8px rgba(255, 255, 0, 0.2); 
+    padding: 20px; 
+    
+}
+
+/* Estilos para el título de la card */
+.card-title , .modal-title {
+    font-weight: bold;
+    color: #005aa5; 
+}
+
+/* Estilos para el texto de la card */
+.card-text {
+    color: #333; 
+}
+
+/* Estilos para el botón de la card */
+.card-button {
+    background-color: #005aa5; 
+    color: #fff;
+    border: none; 
+    border-radius: 5px; 
+    padding: 8px 16px; 
+    cursor: pointer; 
+}
+
+
+/* Estilos para el botón "Ver personaje" */
+button.ver-personaje {
+    background-color: #005aa5; 
+    color: #fff; 
+    border: none; 
+    border-radius: 5px; 
+    padding: 8px 16px; 
+    cursor: pointer; 
+    box-shadow: 0px 4px 8px rgba(255, 255, 0, 0.2); 
+}
+
+/* Estilos para el botón "Ver personaje" al pasar el mouse sobre él */
+button.ver-personaje:hover {
+    background-color: #003a6c; 
+}
+
+
+/* Estilos para el botón "Ver historial" */
+a.btn-ver-historial {
+    background-color: #fff; 
+    color: #005aa5; 
+    border: 2px solid #ffd700; 
+    border-radius: 5px; 
+    padding: 8px 16px; 
+    text-decoration: none; 
+    box-shadow: 0px 4px 8px rgba(255, 255, 0, 0.2); 
+}
+
+/* Estilos para el botón "Ver historial" al pasar el mouse sobre él */
+a.btn-ver-historial:hover {
+    background-color: #ffd700; 
+    color:#005aa5 
+    
+}
+
+
+
+/* Estilos adicionales para las cards del historial */
+#historial .card {
+    margin-bottom: 20px;
+}
+
+#historial .card-title {
+    font-weight: bold;
+}
+
+#historial .card-text {
+    color: #333; 
+}
+
+#historial .card-img-top {
+    width: 100%; 
+    height: auto;
+}
+
+
+#historial .card {
+    margin-bottom: 20px; 
+    padding: 10px; 
+}
+
+#historial .card-title {
+    font-size: 1.5rem; 
+}
+
+#historial .card-text {
+    font-size: 1rem; 
+}
+
+#historial .card-img-top {
+    max-width: 150px; 
+    height: auto; 
+
+}
+
+.text-left{
+    font-size: large;
+    
+}
