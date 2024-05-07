@@ -10,6 +10,44 @@
 
 </head>
 <body>
-    <script src="main.js"></script>
+
+    <div id="app">
+        <div class="row">
+            <div class="col col-3 m-3 p-3">
+        <header></header>
+
+        </div>
+    </div>
+    
+            <div class="modal" tabindex="-1" style="display: block" v-if="verModal">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <p class="h5 modal-title">Personaje: {{ capitalize(pokemonElegido?.name) }}</p>
+                            <button type="button" @click="cerrarModal" class="btn-close" aria-label="Close"></button>
+    
+                        </div>
+                        <div class="modal-body">
+                            <p><span class="fw-bold">Peso:</span> {{pokemonElegido?.weight}} kilogramos</p>
+                            <img :src="pokemonElegido?.front_default" alt="pokemon">
+                    </div>
+
+                </div>
+            </div>
+        </div>
+       
+<div class="row">
+            <div class="card col col-3 m-3 p-3" v-for="pokemon in pokemones">
+                <div class="card-body">
+                    <h5 class="card-title">Nombre: {{ capitalize(pokemon.name) }}</h5>
+                    <p class="card-text">Url de referencia: {{ pokemon.url }}</p>
+                    
+                    <button class="ver-personaje" @click="verPokemon(pokemon.url)">Ver personaje</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+<script src="main.js"></script>
 </body>
 </html>
