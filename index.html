@@ -29,6 +29,7 @@
                         </div>
                         <div class="modal-body">
                             <p><span class="fw-bold">Peso:</span> {{pokemonElegido?.weight}} kilogramos</p>
+                            <p><span class="fw-bold">Efecto:</span> {{pokemonElegido?.effect}}</p>
                             <img :src="pokemonElegido?.front_default" alt="pokemon">
                     </div>
 
@@ -41,7 +42,6 @@
                 <div class="card-body">
                     <h5 class="card-title">Nombre: {{ capitalize(pokemon.name) }}</h5>
                     <p class="card-text">Url de referencia: {{ pokemon.url }}</p>
-                    
                     <button class="ver-personaje" @click="verPokemon(pokemon.url)">Ver personaje</button>
                 </div>
             </div>

@@ -21,7 +21,13 @@ methods: {
                 const { weight, sprites, name } = data;
                 const { front_default } = sprites.other['official-artwork'];
 
-                this.pokemonElegido = { weight, front_default, name};
+                // Acá obtengo información de la especie y el efecto llamando a otra url que está dentro de la primera
+                const speciesResponse = await fetch(data.species.url);
+                const speciesData = await speciesResponse.json();
+                const effectEntries = speciesData.flavor_text_entries;
+                const effect = effectEntries.find(entry => entry.language.name === 'es').flavor_text; 
+
+                this.pokemonElegido = { weight, front_default, name, effect};
                 this.abrirModal();
             } catch (error) {
                 console.error('Error al obtener información del Pokémon:', error);
